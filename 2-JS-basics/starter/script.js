@@ -354,19 +354,53 @@ console.log('John\'s average score is ' + scoreJohn + '. ' + 'Mike\'s average sc
 // function whatDoYouDo(job, firstName) {}
 
 //Function expression
-var whatDoyouDo = function(job, firstName) {
-  switch(job) {
-    case 'teacher':
-      return firstName + ' teaches kids how to code.';
-    case 'driver':
-      return firstName + ' drives a cab in lisbon.';
-    case 'designer':
-      return firstName + ' designs beautiful websites';
-    default:
-      return firstName + ' does something else.';
-  }
-}
+// var whatDoyouDo = function(job, firstName) {
+//   switch(job) {
+//     case 'teacher':
+//       return firstName + ' teaches kids how to code.';
+//     case 'driver':
+//       return firstName + ' drives a cab in lisbon.';
+//     case 'designer':
+//       return firstName + ' designs beautiful websites';
+//     default:
+//       return firstName + ' does something else.';
+//   }
+// }
 
-console.log(whatDoyouDo('teacher', 'John'));
-console.log(whatDoyouDo('designer', 'Jane'));
-console.log(whatDoyouDo('retired', 'Mark'));
+// console.log(whatDoyouDo('teacher', 'John'));
+// console.log(whatDoyouDo('designer', 'Jane'));
+// console.log(whatDoyouDo('retired', 'Mark'));
+
+
+/***********************************
+ * Arrays
+ */
+
+// Initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Different data types
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+john.push('blue');
+john.unshift('Mr.');
+console.log(john);
+
+john.pop();
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf(23));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
