@@ -453,26 +453,46 @@ GOOD LUCK 😀
  */
 
 // Object literal
+// var john = {
+//   firstName: 'John', // firstName = key, John = value, so this is a key value of john
+//   lastName: 'Smith',
+//   birthYear: 1990,
+//   family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//   job: 'teacher',
+//   isMarried: false
+// };
+// console.log(john.firstName);
+// console.log(john['lastName']);
+// var x = 'birthYear';
+// console.log(john[x]);
+
+// john.job = 'designer';
+// john['isMarried'] = true;
+// console.log(john);
+
+// // new Object syntax
+// var jane = new Object();
+// jane.firstName = 'Jane';
+// jane.birthYear = 1969;
+// jane['lastName'] = 'Smith';
+// console.log(jane);
+
+
+/*****************************
+ * Objects and methods
+ */
+
 var john = {
   firstName: 'John', // firstName = key, John = value, so this is a key value of john
   lastName: 'Smith',
-  birthYear: 1990,
+  birthYear: 1992,
   family: ['Jane', 'Mark', 'Bob', 'Emily'],
   job: 'teacher',
-  isMarried: false
+  isMarried: false,
+  calcAge: function() {
+    this.age = 2018 - this.birthYear;
+  }
 };
-console.log(john.firstName);
-console.log(john['lastName']);
-var x = 'birthYear';
-console.log(john[x]);
 
-john.job = 'designer';
-john['isMarried'] = true;
+john.age = john.calcAge();
 console.log(john);
-
-// new Object syntax
-var jane = new Object();
-jane.firstName = 'Jane';
-jane.birthYear = 1969;
-jane['lastName'] = 'Smith';
-console.log(jane);
