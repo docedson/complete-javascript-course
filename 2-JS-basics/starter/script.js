@@ -513,31 +513,88 @@ Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and heig
 GOOD LUCK 😀
 */
 
-var john = {
-  fullName: 'John Smith',
-  mass: 50,
-  height: 80,
-  calcBMI: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  }
-}
+// var john = {
+//   fullName: 'John Smith',
+//   mass: 50,
+//   height: 80,
+//   calcBMI: function() {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// }
 
-var mark = {
-  fullName: 'Mark Miller',
-  mass: 50,
-  height: 80,
-  calcBMI: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  }
-}
+// var mark = {
+//   fullName: 'Mark Miller',
+//   mass: 50,
+//   height: 80,
+//   calcBMI: function() {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// }
 
-if (john.calcBMI() > mark.calcBMI()) {
-  console.log(john.fullName + ' has the highest BMI at ' + john.bmi);
-} else if (mark.calcBMI() > john.calcBMI()) {
-  console.log(mark.fullName + ' has the highest BMI at ' + mark.bmi);
-} else {
-  console.log(john.fullName + ' and ' + mark.fullName + ' have the same BMI.');
+// if (john.calcBMI() > mark.calcBMI()) {
+//   console.log(john.fullName + ' has the highest BMI at ' + john.bmi);
+// } else if (mark.calcBMI() > john.calcBMI()) {
+//   console.log(mark.fullName + ' has the highest BMI at ' + mark.bmi);
+// } else {
+//   console.log(john.fullName + ' and ' + mark.fullName + ' have the same BMI.');
+// }
+
+/************************************
+ * Loops and Iteration
+ */
+
+// for (var i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+// This works because: i = 0, 0 < 10 is true, so its logged to the console, i++
+// Now i = 1, 1 < 10 true, so i is logged to console, i++
+// Now i = 2, 2 < 10 true, so i is looged to console, i++
+// .... Then i = 10, 10 < 10 false, so we exit the loop
+
+// for (var i = 1; i <= 20; i++) {
+//   console.log(i);
+// }
+// // This will do the same thing, but the log will be 1 up to and including 20
+
+// for (var i = 1; i <= 20; i += 2) {
+//   console.log(i);
+// }
+// // This does the same thing as before, but adds 2 to i each loop
+
+// // Below is a 'for loop'
+// var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+// for (var i = 0; i < john.length; i++) {
+//   console.log(john[i]);
+// }
+
+// // Below is a 'while loop'. This is example is exactly the same as the for loop
+// // just a different way to write it
+// var i = 0;
+// while(i < john.length) {
+//   console.log(john[i]);
+//   i++;
+// }
+
+// Continue and break statements
+var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') continue;
+  console.log(john[i]);
 }
+// This is put out all items in the array that are a string
+
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') break;
+  console.log(john[i]);
+}
+// By using 'break' instead of 'continue' the above stops putting out once
+// something other than 'string' is found in the array
+
+// Looping backwards
+for (var i = john.length - 1; i >= 0; i--) {
+  console.log(john[i]);
+}
+// This will start at the end of the arry and go backwards by 1
 
