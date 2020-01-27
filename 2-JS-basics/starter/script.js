@@ -321,28 +321,52 @@ console.log('John\'s average score is ' + scoreJohn + '. ' + 'Mike\'s average sc
  * Functions
  */
 
-function calculateAge(birthYear) {
-  return 2018 - birthYear;
-}
+// function calculateAge(birthYear) {
+//   return 2018 - birthYear;
+// }
 
-var ageJohn = calculateAge(1990);
-var ageMike = calculateAge(1948);
-var ageJane = calculateAge(1969);
-console.log(ageJohn, ageMike, ageJane);
+// var ageJohn = calculateAge(1990);
+// var ageMike = calculateAge(1948);
+// var ageJane = calculateAge(1969);
+// console.log(ageJohn, ageMike, ageJane);
 
-function yearsUntlRetirement(year, firstName) {
-  var age = calculateAge(year);
-  var retirement = 65 - age;
+// function yearsUntlRetirement(year, firstName) {
+//   var age = calculateAge(year);
+//   var retirement = 65 - age;
 
-  if (retirement > 0) {
-    console.log(firstName + ' retires in ' + retirement + ' years.');
-  } else {
-    console.log(firstName + ' has already retired.');
+//   if (retirement > 0) {
+//     console.log(firstName + ' retires in ' + retirement + ' years.');
+//   } else {
+//     console.log(firstName + ' has already retired.');
+//   }
+
+// }
+
+// yearsUntlRetirement(1990, 'John');
+// yearsUntlRetirement(1948, 'Mike');
+// yearsUntlRetirement(1969, 'Jane');
+
+/****************************************
+ * Runction Statement and Expressions
+ */
+
+// Function declaration
+// function whatDoYouDo(job, firstName) {}
+
+//Function expression
+var whatDoyouDo = function(job, firstName) {
+  switch(job) {
+    case 'teacher':
+      return firstName + ' teaches kids how to code.';
+    case 'driver':
+      return firstName + ' drives a cab in lisbon.';
+    case 'designer':
+      return firstName + ' designs beautiful websites';
+    default:
+      return firstName + ' does something else.';
   }
-
 }
 
-yearsUntlRetirement(1990, 'John');
-yearsUntlRetirement(1948, 'Mike');
-yearsUntlRetirement(1969, 'Jane');
-
+console.log(whatDoyouDo('teacher', 'John'));
+console.log(whatDoyouDo('designer', 'Jane'));
+console.log(whatDoyouDo('retired', 'Mark'));
